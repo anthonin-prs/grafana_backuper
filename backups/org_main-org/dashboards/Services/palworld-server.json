@@ -18,7 +18,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 80,
+  "id": 103,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -561,6 +561,6 @@
   "timezone": "",
   "title": "Palworld Server",
   "uid": "af17bb70-aa6f-43a4-aa6a-df5fd1295a14",
-  "version": 12,
+  "version": 1,
   "weekStart": ""
 }

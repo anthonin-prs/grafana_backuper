@@ -24,7 +24,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 60,
+  "id": 93,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -1761,6 +1761,6 @@
   "timezone": "",
   "title": "Power Supervision",
   "uid": "cTn5sNCGkww",
-  "version": 72,
+  "version": 1,
   "weekStart": ""
 }

@@ -24,7 +24,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 70,
+  "id": 96,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -1379,6 +1379,6 @@
   "timezone": "",
   "title": "NAS Monitor",
   "uid": "BvOXfH-4k",
-  "version": 15,
+  "version": 1,
   "weekStart": ""
 }

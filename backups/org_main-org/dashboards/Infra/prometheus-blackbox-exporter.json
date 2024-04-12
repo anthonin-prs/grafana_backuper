@@ -16,7 +16,7 @@
   "editable": true,
   "gnetId": 7587,
   "graphTooltip": 0,
-  "id": 19,
+  "id": 98,
   "iteration": 1618068959538,
   "links": [],
   "panels": [
@@ -17297,5 +17297,5 @@
   "timezone": "",
   "title": "Prometheus Blackbox Exporter",
   "uid": "xtkCtBkiz",
-  "version": 3
+  "version": 1
 }

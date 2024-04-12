@@ -24,7 +24,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 66,
+  "id": 104,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -565,6 +565,6 @@
   "timezone": "",
   "title": "Plex Monitor",
   "uid": "LXj9amn7k",
-  "version": 5,
+  "version": 1,
   "weekStart": ""
 }

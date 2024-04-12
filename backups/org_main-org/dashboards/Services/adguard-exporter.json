@@ -20,7 +20,7 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 13330,
   "graphTooltip": 0,
-  "id": 69,
+  "id": 101,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -1388,6 +1388,6 @@
   "timezone": "",
   "title": "Adguard Exporter",
   "uid": "MIBVglomg",
-  "version": 4,
+  "version": 1,
   "weekStart": ""
 }
