@@ -1,0 +1,16 @@
+{
+	"access": "proxy",
+	"id": 1,
+	"jsonData": {
+		"httpMethod": "GET",
+		"queryTimeout": "60s",
+		"timeInterval": "15s"
+	},
+	"name": "Prometheus",
+	"orgId": 1,
+	"type": "prometheus",
+	"typeLogoUrl": "/public/app/plugins/datasource/prometheus/img/prometheus_logo.svg",
+	"typeName": "Prometheus",
+	"uid": "5R9X5jyGk",
+	"url": "http://localhost:9090"
+}
