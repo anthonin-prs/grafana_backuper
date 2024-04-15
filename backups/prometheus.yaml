@@ -55,17 +55,19 @@ scrape_configs:
       - source_labels: [__param_target]
         target_label: instance
       - target_label: __address__
-        replacement: 192.168.0.208:9115  # The blackbox exporter's real 
+        replacement: blackbox_exporter:9115  # The blackbox exporter's real 
 
   - job_name: 'vmware_vcenter'
     metrics_path: '/metrics'
+    scrape_interval: 120s
+    scrape_timeout: 110s
     static_configs:
       - targets:
-        - 'vsphere.local'
+        - '192.168.0.240'
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
       - source_labels: [__param_target]
         target_label: instance
       - target_label: __address__
-        replacement: 192.168.0.208:9272
+        replacement: vmware_exporter:9272
