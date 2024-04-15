@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -rf backups
+rm -rf backups/org_main-org
 gdg backup connections download
 gdg backup folder download
 gdg backup dashboard download

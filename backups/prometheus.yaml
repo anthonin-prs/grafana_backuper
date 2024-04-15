@@ -1,0 +1,71 @@
+global:
+  scrape_interval: 60s
+  scrape_timeout: 30s
+
+
+scrape_configs:
+  - job_name: 'linux_monitor'
+    static_configs:
+    - targets: ['192.168.0.201:9100', '192.168.0.202:9100', '192.168.0.203:9100', '192.168.0.204:9100', '192.168.0.206:9100', '192.168.0.208:9100', '192.168.0.212:9100', '192.168.0.251:9100', '192.168.0.253:9100']
+
+  - job_name: 'windows_monitor'
+    static_configs:
+    - targets: ['192.168.0.41:9182', '192.168.0.42:9182', '192.168.0.43:9182']
+
+  - job_name: 'ad_guard'
+    metrics_path: '/metrics'
+    static_configs:
+    - targets: ['192.168.0.203:9617']
+
+  - job_name: 'electricity_monitor'
+    static_configs:
+    - targets: ['192.168.0.204:9050']
+
+  - job_name: 'palworld_monitor'
+    static_configs:
+    - targets: ['192.168.0.212:8080']
+
+  - job_name: 'georide_monitor'
+    static_configs:
+    - targets: ['192.168.0.204:9051']
+
+  - job_name: 'nas_monitor'
+    static_configs:
+    - targets: ['192.168.0.210:9100']
+
+  - job_name: 'plex_exporter'
+    static_configs:
+    - targets: ['192.168.0.206:9594']
+
+  - job_name: 'blackbox'
+    metrics_path: /probe
+    params:
+      module: [http_2xx]  # Look for a HTTP 200 response.
+    static_configs:
+      - targets:
+        - https://access-pc.fr
+        - https://anthonin.fr
+        - https://nas.anthonin.fr
+        - https://ebenolt.com
+        - https://router.ebe.ovh
+        - https://plex.ebenolt.com/web/index.html
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: 192.168.0.208:9115  # The blackbox exporter's real 
+
+  - job_name: 'vmware_vcenter'
+    metrics_path: '/metrics'
+    static_configs:
+      - targets:
+        - 'vsphere.local'
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: 192.168.0.208:9272
