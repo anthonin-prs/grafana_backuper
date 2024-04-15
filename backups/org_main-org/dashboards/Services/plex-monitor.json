@@ -24,7 +24,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 104,
+  "id": 32,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -56,7 +56,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "5R9X5jyGk"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "",
       "gridPos": {
@@ -80,7 +80,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "plex_server_info",
           "format": "table",
@@ -96,7 +96,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "5R9X5jyGk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -138,7 +138,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "plex_library_section_size_count{name=\"Films\", server_name=\"Ebenolt-Stream\"}",
           "instant": true,
@@ -158,7 +158,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "5R9X5jyGk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fill": 1,
       "fillGradient": 8,
@@ -207,7 +207,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "plex_sessions_active_count{server_name=\"Ebenolt-Stream\"}",
           "interval": "",
@@ -256,7 +256,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "5R9X5jyGk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fill": 1,
       "fillGradient": 8,
@@ -305,7 +305,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "(((count(count(node_cpu_seconds_total{instance=\"192.168.0.206:9100\"}) by (cpu))) - avg(sum by (mode)(irate(node_cpu_seconds_total{mode='idle',instance=\"192.168.0.206:9100\"}[5m])))) * 100) / count(count(node_cpu_seconds_total{instance=\"192.168.0.206:9100\"}) by (cpu))",
           "instant": false,
@@ -357,7 +357,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "5R9X5jyGk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fill": 1,
       "fillGradient": 8,
@@ -406,7 +406,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "100 - ((node_memory_MemAvailable_bytes{instance=\"192.168.0.206:9100\"} * 100) / node_memory_MemTotal_bytes{instance=\"192.168.0.206:9100\"})",
           "interval": "",
@@ -456,7 +456,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "5R9X5jyGk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fill": 1,
       "fillGradient": 8,
@@ -505,7 +505,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "module_power_consumption{name=\"Serveurs\"}",

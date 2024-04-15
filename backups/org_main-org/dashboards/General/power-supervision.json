@@ -24,7 +24,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 93,
+  "id": 23,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -32,7 +32,7 @@
       "collapsed": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "5R9X5jyGk"
+        "uid": "PBFA97CFB590B2093"
       },
       "gridPos": {
         "h": 1,
@@ -46,7 +46,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "refId": "A"
         }
@@ -57,7 +57,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "5R9X5jyGk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -117,7 +117,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "sum(module_power_consumption{name=~\"$device\"})",
@@ -134,7 +134,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "5R9X5jyGk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -195,7 +195,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "sum(module_power_consumption{name=~\"$device\"})*0.001*24*$kwh_price",
@@ -213,7 +213,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "5R9X5jyGk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -275,7 +275,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "sum(avg_over_time(module_power_consumption{name=~\"$device\"}[30d])*0.001*24*30.5*$kwh_price)+$subscription_price",
@@ -295,7 +295,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "5R9X5jyGk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -356,7 +356,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -376,7 +376,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "5R9X5jyGk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -437,7 +437,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -457,7 +457,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "5R9X5jyGk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -749,7 +749,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -763,7 +763,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -778,7 +778,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -793,7 +793,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -808,7 +808,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -907,7 +907,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "5R9X5jyGk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -991,7 +991,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "sum (module_power_consumption{tag=~\"$tags\", name=~\"$device\", type=~\"$type\"}) by (name)",
@@ -1009,7 +1009,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "5R9X5jyGk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -1107,7 +1107,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "sum (module_power_consumption{tag=~\"$tags\", name=~\"$device\", type=~\"$type\"})",
@@ -1125,7 +1125,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "5R9X5jyGk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -1209,7 +1209,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "sum (module_power_consumption{tag=~\"$tags\", name=~\"$device\", type=~\"$type\"}) by (tag)",
@@ -1227,7 +1227,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "5R9X5jyGk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -1309,7 +1309,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "sum (module_power_consumption{tag=~\"$tags\", name=~\"$device\", type=~\"$type\"}) by (type)",
@@ -1340,7 +1340,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "5R9X5jyGk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -1392,7 +1392,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "avg(module_power_consumption{tag=~\"$tags\", name=~\"$device\", type=~\"$type\"}) by (name)",
@@ -1409,7 +1409,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "5R9X5jyGk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -1461,7 +1461,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "avg(sum(module_power_consumption{tag=~\"$tags\", name=~\"$device\", type=~\"$type\"}) by (tag))by (tag)",
@@ -1478,7 +1478,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "5R9X5jyGk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -1530,7 +1530,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "avg(sum(module_power_consumption{tag=~\"$tags\", name=~\"$device\", type=~\"$type\"}) by (type)) by(type)",
@@ -1558,7 +1558,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "5R9X5jyGk"
+          "uid": "PBFA97CFB590B2093"
         },
         "definition": "label_values(module_device_info, device)",
         "hide": 2,
@@ -1587,7 +1587,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "5R9X5jyGk"
+          "uid": "PBFA97CFB590B2093"
         },
         "definition": "label_values(module_device_info, name)",
         "hide": 2,
@@ -1616,7 +1616,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "5R9X5jyGk"
+          "uid": "PBFA97CFB590B2093"
         },
         "definition": "label_values(module_device_info{tag=~\"$tags\", type=~\"$type\"}, name)",
         "hide": 0,
@@ -1646,7 +1646,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "5R9X5jyGk"
+          "uid": "PBFA97CFB590B2093"
         },
         "definition": "label_values(module_device_info{device=\"$device_id\"}, name)",
         "hide": 2,
@@ -1676,7 +1676,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "5R9X5jyGk"
+          "uid": "PBFA97CFB590B2093"
         },
         "definition": "label_values(module_device_info, tag)",
         "hide": 0,
@@ -1707,7 +1707,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "5R9X5jyGk"
+          "uid": "PBFA97CFB590B2093"
         },
         "definition": "label_values(module_device_info, type)",
         "hide": 0,

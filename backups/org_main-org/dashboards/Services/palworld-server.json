@@ -18,14 +18,14 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 103,
+  "id": 31,
   "links": [],
   "liveNow": false,
   "panels": [
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "5R9X5jyGk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -99,7 +99,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "disableTextWrap": false,
           "editorMode": "builder",
@@ -120,7 +120,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "5R9X5jyGk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -199,7 +199,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "(((count(count(node_cpu_seconds_total{instance=\"192.168.0.212:9100\"}) by (cpu))) - avg(sum by (mode)(irate(node_cpu_seconds_total{mode='idle',instance=\"192.168.0.212:9100\"}[5m])))) * 100) / count(count(node_cpu_seconds_total{instance=\"192.168.0.212:9100\"}) by (cpu))",
@@ -217,7 +217,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "5R9X5jyGk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -298,7 +298,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "node_memory_MemTotal_bytes{instance=\"192.168.0.212:9100\"}",
@@ -311,7 +311,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "node_memory_MemTotal_bytes{instance=\"192.168.0.212:9100\"} - node_memory_MemFree_bytes{instance=\"192.168.0.212:9100\"} - (node_memory_Cached_bytes{instance=\"192.168.0.212:9100\"} + node_memory_Buffers_bytes{instance=\"192.168.0.212:9100\"})",
@@ -329,7 +329,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "5R9X5jyGk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -408,7 +408,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "irate(node_network_receive_bytes_total{instance=\"192.168.0.212:9100\",device!=\"lo\"}[5m])",
@@ -421,7 +421,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "irate(node_network_transmit_bytes_total{instance=\"192.168.0.212:9100\",device!=\"lo\"}[5m])",
@@ -439,7 +439,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "5R9X5jyGk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -518,7 +518,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "node_filesystem_size_bytes{instance=\"192.168.0.212:9100\",device=~\"^/dev/mapper.*\"}",
@@ -531,7 +531,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "5R9X5jyGk"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "node_filesystem_size_bytes{instance=\"192.168.0.212:9100\",device=~\"^/dev/mapper.*\"} - node_filesystem_avail_bytes{instance=\"192.168.0.212:9100\",device=~\"^/dev/mapper.*\"}",

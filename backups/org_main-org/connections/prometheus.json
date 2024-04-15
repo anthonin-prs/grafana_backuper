@@ -1,16 +1,22 @@
 {
 	"access": "proxy",
-	"id": 1,
+	"id": 2,
+	"isDefault": true,
 	"jsonData": {
-		"httpMethod": "GET",
-		"queryTimeout": "60s",
-		"timeInterval": "15s"
+		"cacheLevel": "High",
+		"disableRecordingRules": false,
+		"httpMethod": "POST",
+		"incrementalQueryOverlapWindow": "10m",
+		"manageAlerts": true,
+		"prometheusType": "Prometheus",
+		"prometheusVersion": "2.27.0"
 	},
 	"name": "Prometheus",
 	"orgId": 1,
+	"readOnly": true,
 	"type": "prometheus",
-	"typeLogoUrl": "/public/app/plugins/datasource/prometheus/img/prometheus_logo.svg",
+	"typeLogoUrl": "public/app/plugins/datasource/prometheus/img/prometheus_logo.svg",
 	"typeName": "Prometheus",
-	"uid": "5R9X5jyGk",
-	"url": "http://localhost:9090"
+	"uid": "PBFA97CFB590B2093",
+	"url": "http://prometheus:9090"
 }
