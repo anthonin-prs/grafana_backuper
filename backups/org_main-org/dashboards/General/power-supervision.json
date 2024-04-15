@@ -24,7 +24,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 23,
+  "id": 1,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -111,7 +111,7 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "10.2.1",
+      "pluginVersion": "9.1.6",
       "repeatDirection": "v",
       "targets": [
         {
@@ -189,7 +189,7 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "10.2.1",
+      "pluginVersion": "9.1.6",
       "repeatDirection": "v",
       "targets": [
         {
@@ -269,7 +269,7 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "10.2.1",
+      "pluginVersion": "9.1.6",
       "repeatDirection": "v",
       "targets": [
         {
@@ -350,7 +350,7 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "10.2.1",
+      "pluginVersion": "9.1.6",
       "repeatDirection": "v",
       "targets": [
         {
@@ -431,7 +431,7 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "10.2.1",
+      "pluginVersion": "9.1.6",
       "repeatDirection": "v",
       "targets": [
         {
@@ -466,9 +466,7 @@
           },
           "custom": {
             "align": "right",
-            "cellOptions": {
-              "type": "auto"
-            },
+            "displayMode": "auto",
             "filterable": false,
             "inspect": false
           },
@@ -536,13 +534,6 @@
                 "value": 1
               },
               {
-                "id": "custom.cellOptions",
-                "value": {
-                  "mode": "basic",
-                  "type": "gauge"
-                }
-              },
-              {
                 "id": "max",
                 "value": 40
               }
@@ -554,13 +545,6 @@
               "options": "Conso instantannées"
             },
             "properties": [
-              {
-                "id": "custom.cellOptions",
-                "value": {
-                  "mode": "gradient",
-                  "type": "gauge"
-                }
-              },
               {
                 "id": "max",
                 "value": 1000
@@ -581,13 +565,6 @@
               "options": "Conso moyenne"
             },
             "properties": [
-              {
-                "id": "custom.cellOptions",
-                "value": {
-                  "mode": "gradient",
-                  "type": "gauge"
-                }
-              },
               {
                 "id": "max",
                 "value": 250
@@ -619,13 +596,6 @@
                     "type": "value"
                   }
                 ]
-              },
-              {
-                "id": "custom.cellOptions",
-                "value": {
-                  "mode": "basic",
-                  "type": "color-background"
-                }
               },
               {
                 "id": "custom.width",
@@ -664,13 +634,6 @@
             },
             "properties": [
               {
-                "id": "custom.cellOptions",
-                "value": {
-                  "mode": "basic",
-                  "type": "gauge"
-                }
-              },
-              {
                 "id": "max",
                 "value": 250
               }
@@ -691,13 +654,6 @@
                 "value": 1
               },
               {
-                "id": "custom.cellOptions",
-                "value": {
-                  "mode": "basic",
-                  "type": "color-background"
-                }
-              },
-              {
                 "id": "color",
                 "value": {
                   "mode": "thresholds"
@@ -716,7 +672,7 @@
         ]
       },
       "gridPos": {
-        "h": 13,
+        "h": 10,
         "w": 24,
         "x": 0,
         "y": 6
@@ -744,7 +700,7 @@
           }
         ]
       },
-      "pluginVersion": "10.2.1",
+      "pluginVersion": "9.1.6",
       "targets": [
         {
           "datasource": {
@@ -824,10 +780,9 @@
       "title": "Résumé",
       "transformations": [
         {
-          "id": "joinByField",
+          "id": "seriesToColumns",
           "options": {
-            "byField": "name",
-            "mode": "inner"
+            "byField": "device"
           }
         },
         {
@@ -835,12 +790,13 @@
           "options": {
             "include": {
               "names": [
-                "name",
+                "type 1",
                 "Value #Conso instantannée",
                 "Value #Status",
                 "Value #Conso moyenne 30d",
                 "Value #Conso moyenne intervalle",
-                "Value #Prix mensuel"
+                "Value #Prix mensuel",
+                "name 1"
               ]
             }
           }
@@ -849,42 +805,17 @@
           "id": "organize",
           "options": {
             "excludeByName": {},
-            "indexByName": {
-              "Value #Conso instantannée": 2,
-              "Value #Conso moyenne 30d": 3,
-              "Value #Conso moyenne intervalle": 5,
-              "Value #Prix mensuel": 4,
-              "Value #Status": 1,
-              "name": 0
-            },
+            "indexByName": {},
             "renameByName": {
-              "Value": "Consommation instantanée ",
-              "Value #A": "Consommation instantanée",
-              "Value #B": "Consommation moyenne",
-              "Value #Conso instantannée": "Conso instantannées",
-              "Value #Conso moyenne": "Conso moyenne",
+              "Value #Conso instantannée": "Consommation instantanée",
               "Value #Conso moyenne 30d": "Consommation Moyenne (30j)",
               "Value #Conso moyenne intervalle": "Tendance (intervalle)",
               "Value #Prix mensuel": "Estimation Mensuelle",
               "Value #Status": "Status",
-              "name": "Nom",
-              "tag": "Pièce",
-              "tag 1": "Pièce",
-              "type": "Type",
+              "device": "Nom",
+              "name 1": "Nom",
               "type 1": "Type"
             }
-          }
-        },
-        {
-          "id": "sortBy",
-          "options": {
-            "fields": {},
-            "sort": [
-              {
-                "desc": true,
-                "field": "Conso instantannées"
-              }
-            ]
           }
         }
       ],
@@ -897,7 +828,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 19
+        "y": 16
       },
       "id": 26,
       "panels": [],
@@ -915,7 +846,6 @@
             "mode": "palette-classic"
           },
           "custom": {
-            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -929,7 +859,6 @@
               "tooltip": false,
               "viz": false
             },
-            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 1,
             "pointSize": 5,
@@ -969,7 +898,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 20
+        "y": 17
       },
       "id": 10,
       "options": {
@@ -1017,7 +946,6 @@
             "mode": "palette-classic"
           },
           "custom": {
-            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -1031,7 +959,6 @@
               "tooltip": false,
               "viz": false
             },
-            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 1,
             "pointSize": 5,
@@ -1087,7 +1014,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 20
+        "y": 17
       },
       "id": 20,
       "options": {
@@ -1170,8 +1097,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1187,7 +1113,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 28
+        "y": 25
       },
       "id": 23,
       "options": {
@@ -1272,8 +1198,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1289,7 +1214,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 28
+        "y": 25
       },
       "id": 24,
       "options": {
@@ -1330,7 +1255,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 36
+        "y": 33
       },
       "id": 28,
       "panels": [],
@@ -1365,7 +1290,7 @@
         "h": 9,
         "w": 6,
         "x": 2,
-        "y": 37
+        "y": 34
       },
       "id": 29,
       "options": {
@@ -1434,7 +1359,7 @@
         "h": 9,
         "w": 6,
         "x": 9,
-        "y": 37
+        "y": 34
       },
       "id": 30,
       "options": {
@@ -1503,7 +1428,7 @@
         "h": 9,
         "w": 6,
         "x": 16,
-        "y": 37
+        "y": 34
       },
       "id": 31,
       "options": {
@@ -1546,7 +1471,8 @@
     }
   ],
   "refresh": "5s",
-  "schemaVersion": 38,
+  "schemaVersion": 37,
+  "style": "dark",
   "tags": [],
   "templating": {
     "list": [
@@ -1761,6 +1687,6 @@
   "timezone": "",
   "title": "Power Supervision",
   "uid": "cTn5sNCGkww",
-  "version": 1,
+  "version": 4,
   "weekStart": ""
 }
