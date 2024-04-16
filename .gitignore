@@ -1,3 +1,4 @@
 .gitsecret/keys/random_seed
 !*.secret
 context.ini
+uptime_backups/uptime.ext.ebe.ovh
